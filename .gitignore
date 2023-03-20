@@ -1,3 +1,4 @@
 .env
 env_dir/
 db.sqlite3
+.flake8
