@@ -9,4 +9,9 @@ from django.views import View
 
 class MyView(View):
     def get(self, request):
-        return render(request, 'index.html')
+        return render(request, 'index-2.html')
+
+
+class SayHello(View):
+    def get(self, request):
+        return render(request, 'hello.html', {'name': 'Rafi'})

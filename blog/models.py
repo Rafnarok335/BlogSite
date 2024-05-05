@@ -16,3 +16,10 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=20)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     time = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(default='-')
+
+    class Meta:
+        db_table = 'blog_BlogPosts'
+        indexes = [
+            models.Index(fields=['author', 'time'])
+        ]
